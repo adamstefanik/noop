@@ -80,10 +80,7 @@ public struct RecoveryRing: View {
         ZStack {
             BevelGauge(
                 fraction: fraction,
-                stops: [
-                    .init(color: tipColor.opacity(0.85), location: 0.0),
-                    .init(color: tipColor, location: 1.0)
-                ],
+                stops: StrandPalette.recoveryStops,
                 tipColor: tipColor,
                 numberText: numberString,
                 captionText: showsLabel ? "of 100" : nil,
